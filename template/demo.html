@@ -1,0 +1,146 @@
+
+<div class="demo">
+	<ul class="list_none">
+    	<li><a href="https://1.envato.market/WPQgX" style="background-color:#88C74A" title="Buy Now"><i class="ion-android-cart"></i></a></li>
+        <li><a href="javascript:void(0);" class="demo_icon" title="More Templates" style="background-color:#FF1D4D"><i class="ion-android-apps"></i></a></li>
+        <li><a href="javascript:void(0);" class="color_icon" title="Theme Option" style="background-color:#000"><i class="ion-gear-b"></i></a>
+        	<div class="option_box">
+                <div class="color-switch">	
+                    <h6 class="text-white font_style1">Color Switcher</h6>
+                    <ul>
+                    	<li><button value="theme-default" class="default"></button></li>
+                    	<li><button value="theme-red" class="red"></button></li>
+                    	<li><button value="theme-bluelight" class="bluelight"></button></li>
+                        <li><button value="theme-orange" class="orange"></button></li>
+                        <li><button value="theme-gold" class="gold"></button></li>
+                        <li><button value="theme-saffron" class="saffron"></button></li>
+                    </ul>
+                </div>
+                <div class="layout_option mt-3">	
+                    <h6 class="text-white font_style1">Layout Options</h6>
+                    <span class="wide"> Wide</span>
+                    <span class="boxed"> Boxed</span>
+                </div>
+                <div class="layout_bg_img mt-3">	
+                    <h6 class="text-white font_style1">Boxed layout images</h6>
+                    <ul>
+                    	<li><a href="javascript:void(0)" data-img="assets/images/layout_bg1.jpg"><img src="assets/images/layout_bg1.jpg"/></a></li>
+                        <li><a href="javascript:void(0)" data-img="assets/images/layout_bg2.jpg"><img src="assets/images/layout_bg2.jpg"/></a></li>
+                        <li><a href="javascript:void(0)" data-img="assets/images/layout_bg3.jpg"><img src="assets/images/layout_bg3.jpg"/></a></li>
+                        <li><a href="javascript:void(0)" data-img="assets/images/layout_bg4.jpg"><img src="assets/images/layout_bg4.jpg"/></a></li>
+                        <li><a href="javascript:void(0)" data-img="assets/images/layout_bg5.jpg"><img src="assets/images/layout_bg5.jpg"/></a></li>
+                        <li><a href="javascript:void(0)" data-img="assets/images/layout_bg6.jpg"><img src="assets/images/layout_bg6.jpg"/></a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="flash_tp"><span class="flash_trip">Free Home PSD</span></li>
+    </ul>
+    <div class="demo_list text-center">
+    	<h5 class="font_style1">More HTML Template</h5>
+    	<ul>
+        	<li><a href="http://bestwebcreator.com/dhyana/" title="Dhyana - Yoga Studio & Meditation"><img src="../../../previews.customer.envatousercontent.com/files/268614395/preview.__large_preview.jpg" alt="Dhyana - Yoga Studio & Meditation"/><span>Dhyana - Yoga Studio & Meditation</span></a></li>
+        	<li><a href="http://bestwebcreator.com/cafebiz/demo/" target="_blank" title="Cafe Biz | Restaurant & Food"><img src="../../../previews.customer.envatousercontent.com/files/264286444/Preview.__large_preview.jpg" alt="" /><span>Cafe Biz | Restaurant & Food</span></a></li>
+        	<li><a href="http://bestwebcreator.com/eduglobal/" target="_blank" title="Eduglobal - LMS Education & Courses"><img src="../../../previews.customer.envatousercontent.com/files/264403499/Preview.__large_preview.jpg" alt=""><span>Eduglobal - LMS Education & Courses</span></a></li>
+            <li><a href="http://bestwebcreator.com/anger/" target="_blank" title="Anger - Creative Responsive Multi-Purpose"><img src="../../../previews.customer.envatousercontent.com/files/262587712/Preview.__large_preview.jpg" alt=""><span>Anger - Creative Responsive Multi-Purpose</span></a></li>
+            <li><a href="http://bestwebcreator.com/ATZShop/" target="_blank" title="ATZ Shop - Online Shopping Store"><img src="../../../previews.customer.envatousercontent.com/files/258749574/00_Preview-image.__large_preview.jpg" alt=""><span>ATZ Shop - Online Shopping Store</span></a></li>
+            <li><a href="http://bestwebcreator.com/cryptocash/" target="_blank" title="Cryptocash – ICO Cryptocurrency & ICO Landing Page HTML5 + Dashboard Template"><img src="../../../previews.customer.envatousercontent.com/files/254151235/01_Preview.__large_preview.jpg" alt=""><span>ICO Cryptocurrency Landing Page</span></a></li>
+            <li><a href="http://bestwebcreator.com/cryptoking-landing-page/" target="_blank" title="Cryptoking ICO - Bitcoin & ICO Cryptocurrency Landing Page HTML Template"><img src="../../../previews.customer.envatousercontent.com/files/249437744/01_Preview.__large_preview.jpg" alt=""><span>Bitcoin & ICO Cryptocurrency Landing Page</span></a></li>
+            <li><a href="http://bestwebcreator.com/bitcurrency-demo/" target="_blank" title="Bitcurrency - Bitcoin and Cryptocurrency Landing Page HTML Template"><img src="../../../previews.customer.envatousercontent.com/files/245306307/01_Preview.__large_preview.png" alt=""><span>Bitcoin and Cryptocurrency Landing Page</span></a></li>
+        </ul>
+    </div>
+</div>
+<script>
+
+var removeClass = true;
+$(".demo_icon").click(function () {
+	$("body").toggleClass('switch-open');
+	$(this).toggleClass('switch-active');
+    $(".demo_list").toggleClass('switch-active');
+    removeClass = false;
+});
+
+$(".demo_list,.option_box,.color_icon ").click(function() {
+    removeClass = false;
+});
+
+$("html").click(function () {
+    if (removeClass) {
+        $(".demo_list").removeClass('switch-active');
+		$("body").removeClass('switch-open');
+		$('.demo_icon').removeClass('switch-active');
+		$('.option_box').parents('li').removeClass('switch-active');
+		$('.option_box').removeClass('switch-active');
+    }
+    removeClass = true;
+});
+
+
+$(".color_icon").on("click", function() {
+	$(".option_box").toggleClass("switch-active");
+	$(this).toggleClass("switch-active");
+	$(this).parent().toggleClass("switch-active");
+});
+
+if ( !!Cookies.get('theme') ) {
+	var color_href = 'assets/color/theme-'+ Cookies.get('theme') +'.css';
+	$('.color-switch').find("[value='theme-"+Cookies.get('theme')+"']").parents('li').addClass('active');;
+	$('#layoutstyle').attr('href',color_href);
+}
+
+$('.color-switch').on('click', "button", function(){
+	var color_href = 'assets/color/theme-'+$(this).attr('class')+'.css';
+	$('#layoutstyle').attr('href',color_href);
+	$(this).parents('.color-switch ul').find('li').removeClass('active');
+	$(this).parents('li').addClass('active');
+	removeClass = false;
+	Cookies.set('theme', $(this).attr('class'));
+});
+
+if ( !!Cookies.get('layout_option') ) {
+	$('.layout_option').find('.'+Cookies.get('layout_option')).addClass("active");
+	if( Cookies.get('layout_option') == 'boxed'){
+		$('body').addClass('boxed_layout');
+		$('.option_box').find('.layout_bg_img').addClass('open');
+		$('body').removeClass('wide');
+	}else{
+		$('body').removeClass('boxed_layout');
+		$('.option_box').find('.layout_bg_img').removeClass('open');
+		$('body').addClass('wide');
+	}
+	$('layout_option').attr('href',color_href);
+}
+$('.layout_option span').on('click', function(){
+	var layout = $(this).attr('class');
+	 if ($(this).hasClass('boxed') === true) {
+		$('body').addClass('boxed_layout');
+		$(this).parents().find('.layout_bg_img').addClass('open');
+		$('body').removeClass('wide');
+		 if ( !!Cookies.get('layout_bg_img') ) {
+			$('.layout_bg_img a').find("[data-img='"+Cookies.get('layout_bg_img')+"']").addClass("active");
+			$('.boxed_layout').css('background-image','url('+Cookies.get('layout_bg_img')+')');
+		}
+	}else{
+		$('body').removeClass('boxed_layout');
+		$(this).parents().find('.layout_bg_img').removeClass('open');
+		$('body').addClass('wide');
+	}
+	$(this).parents('.layout_option').find('span').removeClass('active');
+	$(this).addClass("active");
+	Cookies.set('layout_option', layout);
+});
+
+if ( !!Cookies.get('layout_bg_img') ) {
+	$('.layout_bg_img').find("[data-img='"+Cookies.get('layout_bg_img')+"']").addClass("active");
+	$('.boxed_layout').css('background-image','url('+Cookies.get('layout_bg_img')+')');
+}
+
+$('.layout_bg_img a').on('click', function(){
+	var img = $(this).find('img').attr('src');
+	$('.boxed_layout').css('background-image','url('+img+')');
+	$(this).parents('.layout_bg_img').find('a').removeClass('active');
+	$(this).addClass('active');
+	 Cookies.set('layout_bg_img', img);
+});
+	
+</script>
